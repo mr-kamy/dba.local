@@ -29,6 +29,7 @@ ORDER BY `price` LIMIT 10;
 
 --  10 товаров, цена на которых была максимально снижена
 EXPLAIN SELECT * FROM `products`
+WHERE `oldprice` IS NOT NULL
 ORDER BY `oldprice` - `price` DESC LIMIT 10;
 /*
 Запрос выполнялся 49ms
