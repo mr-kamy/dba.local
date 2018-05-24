@@ -16,14 +16,14 @@ VALUES
   ('Посуда'),
   ('Обувь');
 
-INSERT INTO "brands" ("brand") (
+INSERT INTO "brands" ("brand")
   VALUES
     ('Nestle'),
     ('Puma'),
     ('Siemens'),
     ('Shell'),
     ('Adidas')
-);
+;
 
 ALTER TABLE "products"
   ADD COLUMN "cat_id" INTEGER DEFAULT NULL;
