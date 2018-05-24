@@ -49,12 +49,12 @@ ON DELETE RESTRICT;
 SELECT
   *,
   (SELECT cat
-   FROM "cats"
+   FROM cats
    WHERE cats.id = products.cat_id),
   (SELECT brand
-   FROM "brands"
+   FROM brands
    WHERE brands.id = products.br_id)
-FROM "products";
+FROM products;
 
 -- Все товары, бренд которых начинается на букву "А"
 SELECT *
